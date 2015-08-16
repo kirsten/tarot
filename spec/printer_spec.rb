@@ -1,11 +1,12 @@
+require 'ostruct'
 require './printer'
 
 describe Printer do
   let(:cards) do
     [
-      { name: 'The Tower' },
-      { name: 'Three of Cups' },
-      { name: 'The Hermit' }
+      OpenStruct.new({ name: "The Tower" }),
+      OpenStruct.new({ name: "Three of Cups" }),
+      OpenStruct.new({ name: "The Hermit" })
     ]
   end
 
