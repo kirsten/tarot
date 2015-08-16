@@ -5,5 +5,9 @@ class Printer
     @cards = cards
   end
 
+  def print
+    cards.each { |card| puts card[:name] }
+  end
+
 end
 

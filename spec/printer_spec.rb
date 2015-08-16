@@ -19,5 +19,14 @@ describe Printer do
     end
   end
 
+  describe '#print' do
+    it 'prints the names of each card' do
+      expect(STDOUT).to receive(:puts).with('The Tower')
+      expect(STDOUT).to receive(:puts).with('Three of Cups')
+      expect(STDOUT).to receive(:puts).with('The Hermit')
+      printer.print
+    end
+  end
+
 end
 
