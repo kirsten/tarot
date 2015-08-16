@@ -1,4 +1,5 @@
-require './printer'
+require_relative 'printer'
+require_relative 'tarot'
 
 class Reading
   attr_reader :amount, :printer_class
@@ -18,21 +19,7 @@ class Reading
   end
 
   def deck
-    @deck ||= [
-      { name: 'Page of Cups' },
-      { name: 'Seven of Wands' },
-      { name: 'The Fool' },
-      { name: 'The Moon' },
-      { name: 'Eight of Swords' },
-      { name: 'Two of Wands' },
-      { name: 'Five of Pentacles' },
-      { name: 'The Hermit' },
-      { name: 'Seven of Swords' },
-      { name: 'Five of Wands' },
-      { name: 'Three of Cups' },
-      { name: 'The Lovers' },
-      { name: 'The Tower' }
-    ]
+    @deck ||= Tarot.build
   end
 end
 
