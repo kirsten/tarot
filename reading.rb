@@ -23,3 +23,7 @@ class Reading
   end
 end
 
+args = ARGV[0].to_i
+reading_options = args > 0 ? { amount: args } : {}
+Reading.new(reading_options).display
+
