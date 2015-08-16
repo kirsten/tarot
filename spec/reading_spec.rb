@@ -1,4 +1,4 @@
-require './reading'
+require './lib/reading'
 
 class FakePrinter
   def initialize(*); end

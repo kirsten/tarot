@@ -1,4 +1,4 @@
-require './card'
+require './lib/card'
 
 describe Card do
   let(:attributes) { { name: 'The Tower', arcana: :major } }

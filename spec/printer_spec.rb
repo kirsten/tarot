@@ -1,5 +1,5 @@
 require 'ostruct'
-require './printer'
+require './lib/printer'
 
 describe Printer do
   let(:cards) do
