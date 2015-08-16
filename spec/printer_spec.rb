@@ -9,22 +9,14 @@ describe Printer do
     ]
   end
 
-  subject(:printer) { Printer.new(cards) }
+  subject(:printer) { Printer }
 
-  describe '#initialize' do
-    it 'accepts an array of cards to print' do
-      printer = Printer.new(cards)
-      expect(printer.cards).to eq cards
-      expect(printer.cards.last[:name]).to eq 'The Hermit'
-    end
-  end
-
-  describe '#print' do
+  describe '.print' do
     it 'prints the names of each card' do
       expect(STDOUT).to receive(:puts).with('The Tower')
       expect(STDOUT).to receive(:puts).with('Three of Cups')
       expect(STDOUT).to receive(:puts).with('The Hermit')
-      printer.print
+      printer.print(cards)
     end
   end
 

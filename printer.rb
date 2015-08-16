@@ -1,11 +1,6 @@
 class Printer
-  attr_reader :cards
 
-  def initialize(cards)
-    @cards = cards
-  end
-
-  def print
+  def self.print(cards)
     cards.each { |card| puts card[:name] }
   end
 
