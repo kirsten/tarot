@@ -1,6 +1,6 @@
 class Printer
 
-  def self.print(cards)
+  def print(cards)
     cards.each { |card| puts card.name }
   end
 

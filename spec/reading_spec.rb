@@ -3,7 +3,7 @@ require './reading'
 class FakePrinter
   def initialize(*); end
 
-  def self.print(*); end
+  def print(*); end
 end
 
 describe Reading do
@@ -40,7 +40,7 @@ describe Reading do
     it 'sends drawn cards off to the printer' do
       cards = double(:cards)
       allow(reading).to receive(:draw_cards).and_return(cards)
-      expect(reading.printer_class).to receive(:print).with(cards)
+      expect(reading.printer).to receive(:print).with(cards)
       reading.display
     end
   end

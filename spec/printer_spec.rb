@@ -10,9 +10,9 @@ describe Printer do
     ]
   end
 
-  subject(:printer) { Printer }
+  subject(:printer) { Printer.new }
 
-  describe '.print' do
+  describe '#print' do
     it 'prints the names of each card' do
       expect(STDOUT).to receive(:puts).with('The Tower')
       expect(STDOUT).to receive(:puts).with('Three of Cups')
