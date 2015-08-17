@@ -7,7 +7,7 @@ class Reading
   def initialize(options = {})
     @amount        = options.fetch(:amount) { 3 }
     @printer_class = options.fetch(:printer_class) { Printer }
-    @printer       = @printer_class.new
+    @printer       = @printer_class.new({ card_count: @amount })
   end
 
   def display
